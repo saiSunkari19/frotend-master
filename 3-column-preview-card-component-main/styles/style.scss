@@ -1,0 +1,102 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --trans-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-grey: hsl(0, 0%, 95%);
+}
+
+body {
+  background-color: var(--very-light-grey);
+  font-family: 'Big Shoulders Display', cursive;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.container {
+  .card {
+    display: flex;
+    width: 60%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 8rem 1rem 8rem 15rem;
+  }
+  .data-orange {
+    background-color: var(--bright-orange);
+    padding: 2rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    .btn {
+      color: var(--bright-orange);
+    }
+  }
+
+  .data-light-cyan {
+    background-color: var(--dark-cyan);
+    padding: 2rem;
+    .btn {
+      color: var(--dark-cyan);
+    }
+  }
+  .data-dark-cyan {
+    background-color: var(--very-dark-cyan);
+    padding: 2rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    .btn {
+      color: var(--very-dark-cyan);
+    }
+  }
+  h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    color: var(--very-light-grey);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  p {
+    color: var(--trans-white);
+    font-weight: 400;
+    font-size: 15px;
+  }
+
+  .btn {
+    margin-top: 4rem;
+    font-size: 0.9rem;
+    width: 65%;
+    font-weight: 700;
+    border-radius: 3rem;
+    padding: 0.9rem;
+    border: none;
+
+    &:hover {
+      background-color: transparent;
+      color: var(--trans-white);
+      border: 1.5px solid var(--trans-white);
+      padding: 0.8rem;
+    }
+  }
+  img {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    .card {
+      width: 90%;
+      //   display: flex;
+      flex-direction: column;
+      margin: 4rem 1rem 4rem 1rem;
+
+      .data-orange {
+        border-radius: 0.5rem 0.5rem 0 0;
+      }
+      .data-dark-cyan {
+        border-radius: 0 0 0.5rem 0.5rem;
+      }
+      .btn {
+        margin-top: 1rem;
+        padding: 0.8rem;
+        width: 50%;
+      }
+    }
+  }
+}
